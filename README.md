@@ -2,6 +2,28 @@
 
 ## Exercices for session 2
 
+### ESP32
+
+The [ESP32](https://www.espressif.com/en/products/socs/esp32) is a microcontroller with Wi-Fi and Bluetooth connectivity. It has been created by [Espressif](https://www.espressif.com/en). It's part of the [ESP family](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/4/38).
+
+[ESP-IDF](https://www.espressif.com/en/products/sdks/esp-idf) (IoT Development Framework) is Espressif's SDK (Software Development Kit) for developing applications for the ESP32.
+
+### Overview of ESP-IDF
+
+ESP-IDF is based on [FreeRTOS](https://www.freertos.org/) and provides a rich set of libraries.
+
+FreeRTOS provides the means to architect an application: tasks, synchronization primitives, etc. The libraries provide the means to handle hardware resources: Wi-Fi, Bluetooth, Flash memory, interfaces, etc.
+
+An application can be developped using three different types of environments:
+
+* [Eclipse IDE](https://www.eclipse.org/ide/) (Integrated Development Environment), thanks to a [dedicated plugin](https://github.com/espressif/idf-eclipse-plugin/blob/master/README.md)
+* [Visual Studio Code](https://code.visualstudio.com/), thanks to a [dedicated extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension)
+* the [command line](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-macos-setup.html), with any code editor
+
+ESP-IDF can be used in Linux, macOS or Windows.
+
+In our exercises, we will use Eclipse with the dedicated plugin, in a Linux virtual machine. Linux is easier to use, and more adapted to embedded software development.
+
 ### Prerequisite
 
 * An ESP32-DevKitC-32E board
@@ -33,27 +55,3 @@ If it runs macOS or Windows, chack this [forum thread](https://forums.virtualbox
 Follow [these instructions](https://github.com/PascalBod/lm-esp32-eclipse#sample-application) to create a first sample application, based on the *hello_world* template.
 
 Compile the project, flash it on the ESP32 board, and display the output of the application.
-
-## Overview of ESP-IDF environment
-
-ESP-IDF (*ESP* is for *ESPressif,* *IDF* is for *IoT Development Framework*) allows to to develop applications for ESP32-based boards. ESP-IDF integrates FreeRTOS, which allows to design application code using tasks, synchronization primitives, etc. Additionally, ESP-IDF provides a rich set of APIs, which are used to handle all hardware resources: Wi-Fi, Bluetooth, Flash memory, interfaces, etc.
-
-An application can be developped using three different types of environments:
-* Eclipse IDE (Integrated Development Environment), thanks to a dedicated plugin
-* Visual Studio Code, thanks to a dedicated plugin
-* the command line, with any code editor
-
-ESP-IDF can be used in Linux, macOS or Windows.
-
-In our exercises, we use Eclipse with the dedicated plugin, in a Linux virtual machine. Linux is easier to use, and more adapted to embedded software development.
-
-## Reference documents
-
-* [VirtualBox website](https://www.virtualbox.org/)
-* [Linux Mint website](https://linuxmint.com/)
-* Espressif:
-  * [website](https://www.espressif.com/en)
-  * [ESP-IDF Get Started webpage](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/get-started/index.html#introduction)
-  * [ESP32-DevKitC Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/hw-reference/esp32/get-started-devkitc.html)
-
-Note: the instructions in the *Create a first sample application* section above should be enough to let you create and run a first sample application.
