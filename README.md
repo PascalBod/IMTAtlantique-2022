@@ -24,6 +24,8 @@ ESP-IDF can be used in Linux, macOS or Windows.
 
 In our exercises, we will use Eclipse with the dedicated plugin, in a Linux virtual machine. Linux is easier to use, and more adapted to embedded software development.
 
+Programming language is C.
+
 ### Prerequisite
 
 * An ESP32-DevKitC-32E board
@@ -55,3 +57,24 @@ If it runs macOS or Windows, chack this [forum thread](https://forums.virtualbox
 Follow [these instructions](https://github.com/PascalBod/lm-esp32-eclipse#sample-application) to create a first sample application, based on the *hello_world* template.
 
 Compile the project, flash it on the ESP32 board, and display the output of the application.
+
+Note: the *hello_world* template is already created in Eclipse, in the prebuilt VM.
+
+### Create a second sample application and modify it
+
+Create a second sample application, based on the *wifi > scan* template. This template displays available Wi-Fi access points (AP).
+
+Compile the project, flash it, and display the list of AP.
+
+The template performs only one scan operation. Modify it so that it performs a scan operation every 10 seconds.
+
+Doing this requires to use the [Wi-Fi driver](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-guides/wifi.html) API (Application Programming Interface) along with some functions from the [ESP-NETIF](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-reference/network/esp_netif.html) API and from the [event loop](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-reference/system/esp_event.html) API. 
+
+If you don't succeed, don't worry. But, in any case, take notes about how you addressed the problems you faced:
+
+* how did you try to understand the meaning of the error messages?
+* how did you search information in the Espressif documentation?
+* how did you search information on the Internet?
+* which websites did you discover? Which ones seem the most interesting ones?
+* did you manage to get a first global view of the software execution environment?
+* etc.
