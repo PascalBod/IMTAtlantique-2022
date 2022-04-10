@@ -37,7 +37,7 @@ The FreeRTOS timer API is presented [here](https://www.freertos.org/FreeRTOS-Sof
 
 ## Background task and ISR
 
-This exercise simulates the reception of bytes from a serial connection. A timer is used to simulate the periodic byte reception, the timer handler playing the role of the ISR. 
+This exercise simulates the reception of bytes from a serial connection. A timer is used to simulate the periodic byte reception, the timer handler playing the role of the ISR. Its source code is in `~/Dev/IMTAtlantique-2022/exercisesForSession3/sim_serial`.
 
 Import the project into Eclipse.
 
