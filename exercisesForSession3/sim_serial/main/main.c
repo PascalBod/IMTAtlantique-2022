@@ -45,7 +45,7 @@ static const char TAG[] = "MN";
 // timer handler and the background task.
 static uint8_t rec_byte;
 // Reception event flag.
-static bool rec_flag;
+static bool rec_byte_event;
 
 // Timer handler, simulating the reception of a byte. Byte values
 // are in sequence: 0, 1, 2 ... 255, 0, 1, 2 ...
@@ -53,7 +53,7 @@ static void timer_handler(TimerHandle_t timer)
 {
 	// Wrap around: after 255, rec_byte will be 0.
 	rec_byte++;
-	rec_flag = true;
+	rec_byte_event = true;
 }
 
 void app_main(void)
@@ -76,7 +76,7 @@ void app_main(void)
 
 	// Initialize global variables.
     rec_byte = 0;
-    rec_flag = false;
+    rec_byte_event = false;
 
     // Initialize random generator.
     srand(time(NULL));
@@ -92,10 +92,10 @@ void app_main(void)
     // Background task loop.
     while (true)
     {
-    	if (rec_flag)
+    	if (rec_byte_event)
     	{
     		// A byte has been received. Reset reception event.
-    		rec_flag = false;
+    		rec_byte_event = false;
     		// Remember byte value before processing.
     		byte_before = rec_byte;
     		// Process received byte: simulate processing time by waiting.
