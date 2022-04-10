@@ -1,12 +1,12 @@
-## Exercices for session 2
+# Exercises for session 2
 
-### ESP32
+## ESP32
 
 The [ESP32](https://www.espressif.com/en/products/socs/esp32) is a microcontroller with Wi-Fi and Bluetooth connectivity. It has been created by [Espressif](https://www.espressif.com/en). It's part of the [ESP family](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/4/38).
 
 [ESP-IDF](https://www.espressif.com/en/products/sdks/esp-idf) (IoT Development Framework) is Espressif's SDK (Software Development Kit) for developing applications for the ESP32.
 
-### Overview of ESP-IDF
+## Overview of ESP-IDF
 
 ESP-IDF is based on [FreeRTOS](https://www.freertos.org/) and provides a rich set of libraries.
 
@@ -24,19 +24,19 @@ In our exercises, we will use Eclipse with the dedicated plugin, in a Linux virt
 
 Programming language is C.
 
-### Prerequisite
+## Prerequisite
 
 * An ESP32-DevKitC-32E board
 
-### Create a Linux VM with Eclipse configured for ESP-IDF
+## Create a Linux VM with Eclipse configured for ESP-IDF
 
 Create a Linux virtual machine (VM) containing the Eclipse IDE configured for ESP-IDF. Two possibilities:
 
-#### Possibility 1 - step by step
+### Possibility 1 - step by step
 
 Create the Linux VM and configure it step by step, as described by [this article](https://github.com/PascalBod/lm-esp32-eclipse)
 
-#### Possibility 2 - prebuilt VM
+### Possibility 2 - prebuilt VM
 
 Install VirtualBox, as explained [here](https://github.com/PascalBod/lm-vm#virtualbox-installation).
 
@@ -50,7 +50,7 @@ $ sudo adduser developer vboxusers
 
 If it runs macOS or Windows, chack this [forum thread](https://forums.virtualbox.org/viewtopic.php?f=35&t=82639), in case of problem with the USB port later on.
 
-### Create a first sample application
+## Create a first sample application
 
 Follow [these instructions](https://github.com/PascalBod/lm-esp32-eclipse#sample-application) to create a first sample application, based on the *hello_world* template.
 
@@ -58,7 +58,7 @@ Compile the project, flash it on the ESP32 board, and display the output of the 
 
 Note: the *hello_world* template is already created in Eclipse, in the prebuilt VM.
 
-### Create a second sample application and modify it
+## Create a second sample application and modify it
 
 Create a second sample application, based on the *wifi > scan* template. This template displays available Wi-Fi access points (AP).
 
