@@ -2,7 +2,7 @@
 
 ## Download the exercises
 
-In the Linux VM, open a terminal (**Main menu > Terminal**). In this terminal, create a directory where you will download a copy of the ESP-IDF projects used by the exercises:
+In the Linux VM, open a terminal (**Main menu > Terminal**, in the task bar). In this terminal, create a directory where you will download a copy of the ESP-IDF projects used by the exercises:
 
 ```shell
 $ # Be sure to be in your home directory.
@@ -18,7 +18,7 @@ Using the above commands, exercises for session 3 are downloaded in `~/Dev/IMTAt
 
 ## Get acquainted with timers
 
-This exercise shows how to create and use a periodic timer. Its source code is in ``~/Dev/IMTAtlantique-2022/exercisesForSession3/timer_handler`.
+This exercise shows how to create and use a periodic timer. Its source code is in `~/Dev/IMTAtlantique-2022/exercisesForSession3/timer_handler`.
 
 Import the associated project into Eclipse, with **File > Import... > Espressif > Existing IDF Project**:
 * In the **Import** window, after having selected **Existing IDF Project**, click the **Next >** button
