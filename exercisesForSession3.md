@@ -47,4 +47,8 @@ In the code here, we simulate a more or less long processing by waiting for a ra
 
 Run the application, and observe its behavior. How do you explain what happens?
 
+## NMEA message decoder bugs
 
+There is one critical issue in the [NMEA decoder FSA](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/60). Find which one and correct it
+
+If the serial link is disconnected and reconnected, next complete NMEA message may be lost. Under which conditions? How to correct this?
