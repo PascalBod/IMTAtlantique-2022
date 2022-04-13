@@ -36,6 +36,7 @@
     * Microcontrollers for a few US$, demonstration/development boards for a few tens of US$
 
 * [Exercises for session 2](exercisesForSession2.md)
+* [Solutions for session 2](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/solutionsForSession2)
 
 ## Summary of session 2
 
