@@ -35,9 +35,9 @@
     * MangOH boards: an open source design based on a Sierra Wireless cellular communication module running Linux
     * Microcontrollers for a few US$, demonstration/development boards for a few tens of US$
 
-* [Exercises for session 2](exercisesForSession2.md)
-* [Solutions for session 2](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/solutionsForSession2)
+* [Session 1 exercises](session1Exercises.md)
 
 ## Summary of session 2
 
-* [Exercises for session 3](exercisesForSession3.md)
+* [Session 1 solutions](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session1Solutions)
+* [Session 2 exercises](session2Exercises.md)
