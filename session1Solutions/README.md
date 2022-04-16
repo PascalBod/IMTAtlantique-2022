@@ -55,22 +55,20 @@ ELF file SHA256: 3c04f35483f27d72
 Rebooting...
 ```
 
-According to the first lines, the call to `esp_event_loop_create_default` fails. Source of the problem: the function allocates some resources (memory, data structures, etc.) and the application should deallocate them before calling `esp_event_loop_create_default` a second time.
-
-The same has to be done for every function allocating some resource: `esp_netif_create_default_wifi_sta`, `esp_wifi_init`, etc.
-
-Resulting code: see [scan_solution project](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session1Solutions/scan_solution).
-
 ### Looking for the solution
 
-The error messages usually contain information:
-* The type of error; here: `ESP_ERR_INVALID_STATE`. So, when making the second call, ESP-IDF was not in a right state
-* Number of the line at the origin of the problem, name of associated function, etc. Here, the problem occurs when `esp_event_loop_create_default` is called
+According to the first lines, the call to `esp_event_loop_create_default` fails. 
+
+The error messages contain some hints:
+* The type of error: `ESP_ERR_INVALID_STATE`. So, when making the second call, ESP-IDF was not in a right state
+* Number of the line at the origin of the problem, name of associated function, etc. Here, the problem occurs when `esp_event_loop_create_default` is called a second time
 
 Now let's check the documentation; in our case, ESP-IDF documentation: 
-* The [Wi-Fi driver documentation](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-guides/wifi.html) mentions the default event loop, and provides a link to some documentation
-* The [default event loop documentation](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-reference/system/esp_event.html#esp-event-default-loops) the list of available functions. One seems the good candidate: `esp_event_loop_delete_default`
-* But it appears that using it is not enough. Some other ESP-IDF functions must be called in order to deallocate all resources. ESP-IDF functions allocating resources must be identified, and their counterparts must be found
+* The [Wi-Fi driver documentation](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-guides/wifi.html) mentions the default event loop, and provides a link to some documentation. A diagram and the text mention a *deinit phase*
+* The [default event loop documentation](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-reference/system/esp_event.html#esp-event-default-loops) the list of available functions. Among them: `esp_event_loop_delete_default`
+* The problem appears the second time the scan function is called, and the libraries provide some functions to deinit/deallocate: a logical assumption is that resources allocated by the first call must be deallocated before a second call is performed. Actually, this is the solution.
+
+Resulting code: see [scan_solution project](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session1Solutions/scan_solution).
 
 ESP-IDF documentation website is the primary source of information. The ESP32 ecosystem provides additional resources:
 * [ESP32 forum](https://esp32.com/)
