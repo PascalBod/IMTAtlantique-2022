@@ -74,5 +74,4 @@
     * Finite State Automaton (FSA) or Finite State Machine (FSM)
     * Ring buffer or circular buffer
 
-* [Solutions to session 1 exercises](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session1Solutions)
 * [Session 2 exercises](session2Exercises.md)
