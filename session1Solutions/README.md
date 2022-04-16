@@ -65,7 +65,7 @@ The error messages contain some hints:
 
 Now let's check the documentation; in our case, ESP-IDF documentation: 
 * The [Wi-Fi driver documentation](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-guides/wifi.html) mentions the default event loop, and provides a link to some documentation. A diagram and the text mention a *deinit phase*
-* The [default event loop documentation](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-reference/system/esp_event.html#esp-event-default-loops) the list of available functions. Among them: `esp_event_loop_delete_default`
+* The [default event loop documentation](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-reference/system/esp_event.html#esp-event-default-loops) provides the list of available functions. Among them: `esp_event_loop_delete_default`
 * The problem appears the second time the scan function is called, and the libraries provide some functions to deinit/deallocate: a logical assumption is that resources allocated by the first call must be deallocated before a second call is performed. Actually, this is the solution.
 
 Resulting code: see [scan_solution project](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session1Solutions/scan_solution).
