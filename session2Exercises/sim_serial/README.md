@@ -1,1 +1,1 @@
-Session 2 - first exercise.
+Session 2 - second exercise.
