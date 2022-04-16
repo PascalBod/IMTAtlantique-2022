@@ -1,4 +1,4 @@
-# Exercises for session 2
+# Session 1 exercises
 
 ## ESP32
 

@@ -1,4 +1,4 @@
-# Solutions to exercises for session 2
+# Solutions to session 1 exercises
 
 ## Wi-Fi scan
 
@@ -59,7 +59,7 @@ According to the first lines, the call to `esp_event_loop_create_default` fails.
 
 The same has to be done for every function allocating some resource: `esp_netif_create_default_wifi_sta`, `esp_wifi_init`, etc.
 
-Resulting code: see [scan_solution project](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/solutionsForSession2/scan_solution).
+Resulting code: see [scan_solution project](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session1Solutions/scan_solution).
 
 ### Looking for the solution
 
