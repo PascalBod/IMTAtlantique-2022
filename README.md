@@ -75,3 +75,16 @@
     * Ring buffer or circular buffer
 
 * [Session 2 exercises](session2Exercises.md)
+
+## Summary of session 3
+
+* [Solutions to session 2 exercises](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session2Solutions)
+* [Bare metal software development for STM32 microcontroller](https://pascalbod.github.io/stm32-dev-en-presentation/)
+  * The target board
+  * The target microcontroller
+  * Harwdware and software documentation
+  * [STM32CubeIDE](https://pascalbod.github.io/stm32-dev-en-presentation/#/21)
+  * Build, run, debug
+  * SWV
+
+* [Session 3 exercise](https://github.com/PascalBod/IMTAtlantique-2022/blob/main/session3Exercises.md)
