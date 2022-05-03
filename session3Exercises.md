@@ -25,7 +25,7 @@ The access point information (SSID and password) must be provided to the applica
 
 The application works in the following way:
 * `app_main` is started. It calls `fast_scan`
-* `fast_scan` performs the follwoing successive tasks:
+* `fast_scan` performs the following successive tasks:
   * It initializes the network driver (`esp_netif_init`)
   * It creates what is named the default event loop (`esp_event_loop_create_default`)
   * It initializes the Wi-Fi driver (`esp_wifi_init`)
