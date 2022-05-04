@@ -40,6 +40,7 @@
 ## Summary of session 2
 
 * [Solutions to session 1 exercises](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session1Solutions)
+
 * [Software development](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/device-7)
   * [Cross development](https://pascalbod.github.io/iot-en-presentation/connectedDevice.html#/7/1)
     * The application is developped for a target machine (microcontroller board) different from the development machine (desktop computer)
@@ -79,6 +80,7 @@
 ## Summary of session 3
 
 * [Solutions to session 2 exercises](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session2Solutions)
+
 * [Bare metal software development for STM32 microcontroller](https://pascalbod.github.io/stm32-dev-en-presentation/)
   * The target board
   * The target microcontroller
@@ -88,3 +90,21 @@
   * SWV
 
 * [Session 3 exercise](https://github.com/PascalBod/IMTAtlantique-2022/blob/main/session3Exercises.md)
+
+## Summary of session 4
+
+* [Solution to session 3 exercise](https://github.com/PascalBod/IMTAtlantique-2022/tree/main/session3Solutions)
+
+* [Application startup, stack, vector table, startup file, etc.](https://pascalbod.github.io/stm32-dev-en-presentation/#/30)
+* [`serial` sample application: background task + ISR + atomicity for shared data structures](https://pascalbod.github.io/stm32-dev-en-presentation/#/53)
+* [Data interchange](https://pascalbod.github.io/iot-en-presentation/#/communications-7)
+  * message or stream?
+  * UDP and many others are messages, TCP is stream
+  * message format: the problems of transparency, endianness, and serialization (includes endianness)
+  * ASN.1, Protocol Buffers, CBOR, other
+  * message exchange: MQTT, CoAP, other
+ 
+* [Session 4 exercise: UDP over Wi-Fi](https://github.com/PascalBod/espidf-udp)
+  * This repository demonstrates step-by-step how to exchange messages between an ESP-IDF application and a PC application using UDP datagrams, through five successive steps
+  * Go through the first three steps at least
+  * No specific question. In the exercise report, provide a feedback about what you understood
