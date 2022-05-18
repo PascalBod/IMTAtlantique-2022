@@ -108,3 +108,13 @@
   * This repository demonstrates step-by-step how to exchange messages between an ESP-IDF application and a PC application using UDP datagrams, through five successive steps
   * Go through the first three steps at least
   * No specific question. In the exercise report, provide a feedback about what you understood
+
+## Summary of session 5
+
+* Debriefing about [espidf-udp](https://github.com/PascalBod/espidf-udp)
+* [Introduction to RTOS](https://pascalbod.github.io/rtos-en-presentation/)
+* Session 5 exercise: using [espidf-udp](https://github.com/PascalBod/espidf-udp) as a code base,
+  * Develop a python server which accepts at least one TCP connection request, and which creates a socket to receive data
+  * Define a message format. Explain every decision you take
+  * Add code to the python server to decode and display messages complying with the format you defined, received on the TCP socket
+  * Develop an ESP32 application which connects to the server using a TCP socket, and which sends messages to the server over the socket, on a periodic basis
