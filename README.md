@@ -33,7 +33,7 @@
     * Cypress PSoc family. Microcontrollers with analog blocks
     * Espressif ESP family. Wi-Fi (+ Bluetooth) microcontrollers
     * MangOH boards: an open source design based on a Sierra Wireless cellular communication module running Linux
-    * Microcontrollers for a few US$, demonstration/development boards for a few tens of US$
+    * Microcontrollers for a few US dollars, demonstration/development boards for a few tens of US dollars
 
 * [Session 1 exercises](session1Exercises.md)
 
